@@ -1,0 +1,17 @@
+INDEX VERSION 1.131+/home/franck/Workspaces/spring-ib/.metadata/.plugins/org.eclipse.jdt.core
+84318705.index
+2340291222.index
+320763512.index
+3745479269.index
+2506839901.index
+1372871954.index
+134847889.index
+381849882.index
+1865797976.index
+2694288588.index
+1676339286.index
+2641252270.index
+764594273.index
+1154670019.index
+103074974.index
+2854739015.index

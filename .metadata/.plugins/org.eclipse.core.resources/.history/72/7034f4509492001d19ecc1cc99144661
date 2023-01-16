@@ -1,0 +1,7 @@
+package org.antislashn.communes.dao;
+
+import org.antislashn.communes.Commune;
+
+public interface CommuneDAO {
+	Commune findById(long id);
+}

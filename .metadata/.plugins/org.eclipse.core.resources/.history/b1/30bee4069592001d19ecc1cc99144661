@@ -1,0 +1,19 @@
+package org.antislashn.formation;
+
+import java.util.List;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MainJpaBase {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext appCtx = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+		ContactDao dao = appCtx.getBean(ContactDao.class);
+		List<Contact> contacts = dao.getAll();
+		for(Contact c : contacts) {
+			System.out.println(c);
+		}
+		appCtx.close();
+	}
+
+}

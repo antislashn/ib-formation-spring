@@ -1,0 +1,73 @@
+package org.antislashn.communes;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+public class CommuneDAO {
+	private EntityManagerFactory emf;
+
+	public CommuneDAO(EntityManagerFactory emf) {
+		this.emf = emf;
+	}
+	
+	public Commune insert(Commune commune) {
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		
+		em.persist(commune);
+		
+		em.getTransaction().commit();
+		em.close();
+		return commune;
+	}
+	
+	public Commune findById(int id) {
+		EntityManager em = emf.createEntityManager();
+		Commune commune = em.find(Commune.class, id);
+		em.close();
+		return commune;
+	}
+	
+	public Optional<Commune> getById(int id) {
+		EntityManager em = emf.createEntityManager();
+		String sql = "SELECT * FROM communes WHERE id=?";
+		
+		Commune commune = (Commune) em.createNativeQuery(sql,Commune.class)
+							.setParameter(1, id)
+							.getSingleResult();
+		return Optional.ofNullable(commune);
+	}
+	
+	public List<Commune> getCommunesByDepartement(String departement){
+		String jpql = "SELECT c FROM Commune c WHERE UPPER(c.departement) = UPPER(:departement)";
+		EntityManager em = emf.createEntityManager();
+		List<Commune> communes = em.createQuery(jpql, Commune.class)
+									.setParameter("departement", departement)
+									.getResultList();
+		em.close();
+		return communes;
+	}
+	
+	public List<Commune> getCommunesByRegion(String region){
+		EntityManager em = emf.createEntityManager();
+		List<Commune> communes = em.createNamedQuery("Commune.findByRegion",Commune.class)
+									.setParameter("region", region)
+									.getResultList();
+		em.close();
+		return communes;
+	}
+	
+	public List<Commune> findByCodePostalStartingWith(String cp){
+		EntityManager em = emf.createEntityManager();
+		List<Commune> communes = em.createNamedQuery("Commune.findByCodePostalStartingWith",Commune.class)
+									.setParameter("cp", cp+"%")
+									.getResultList();
+		em.close();
+		return communes;
+	}
+	
+
+}

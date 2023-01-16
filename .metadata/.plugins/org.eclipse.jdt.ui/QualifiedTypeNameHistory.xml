@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.experimental.FieldDefaults"/>
+    <fullyQualifiedTypeName name="org.antislashn.communes.Commune"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="org.antislashn.communes.entities.Commune"/>
+    <fullyQualifiedTypeName name="org.antislashn.communes.dao.CommuneDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+</qualifiedTypeNameHistroy>

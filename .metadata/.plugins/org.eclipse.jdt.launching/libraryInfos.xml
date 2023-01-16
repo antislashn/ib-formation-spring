@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/opt/java/jdk-11.0.8" version="11.0.8"/>
+    <libraryInfo home="/home/franck/Environnements/sts-4.8.1.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_15.0.0.v20201014-1246" version="15"/>
+    <libraryInfo home="/home/franck/Environnements/sts-4.8.1.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_15.0.0.v20201014-1246/jre" version="15"/>
+    <libraryInfo home="/opt/java/jdk-17" version="17"/>
+</libraryInfos>

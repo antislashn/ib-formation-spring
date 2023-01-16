@@ -1,0 +1,21 @@
+package org.antislashn.communes;
+
+import java.util.Optional;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class MainCommunes {
+
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("communes");
+		
+		CommuneDAO dao = new CommuneDAO(emf);
+		
+		Commune c = dao.findById(987);
+		System.out.println(c);
+
+		emf.close();
+	}
+
+}

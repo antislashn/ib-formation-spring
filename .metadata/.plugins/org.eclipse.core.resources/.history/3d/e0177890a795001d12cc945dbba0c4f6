@@ -1,0 +1,47 @@
+package demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Musicien {
+	private String partition;
+	private String bar;
+	private Instrument instrument;
+	
+	public Musicien() {
+		System.out.println("constructeur Musicien() : partition == "+partition);
+	}
+	
+	
+	@Autowired
+	public Musicien(String partition, String bar,Instrument instrument) {
+		this.partition = partition;
+		this.bar = bar;
+		this.instrument = instrument;
+	}
+
+
+
+	public void jouer() {
+		System.out.println(partition);
+		System.out.println(bar);
+		instrument.jouer();
+	}
+	public String getPartition() {
+		return partition;
+	}
+	public void setPartition(String partition) {
+		this.partition = partition;
+	}
+	public Instrument getInstrument() {
+		return instrument;
+	}
+	public void setInstrument(Instrument instrument) {
+		this.instrument = instrument;
+	}
+	
+	
+}
