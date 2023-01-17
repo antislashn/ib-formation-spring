@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
-//@ComponentScan(basePackages = {"demo"})
+@ComponentScan
 @PropertySource("classpath:application.properties")
 @EnableAspectJAutoProxy
 public class MainSpringMusicien {
