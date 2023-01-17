@@ -15,7 +15,9 @@ public class CommuneDaoJpaImpl implements CommuneDAO {
 	public Commune findById(int id) {
 		Commune c = null;
 		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
 		c = em.find(Commune.class, id);
+		em.getTransaction().commit();
 		em.close();
 		return c;
 	}
