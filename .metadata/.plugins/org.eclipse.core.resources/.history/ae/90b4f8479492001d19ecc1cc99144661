@@ -1,5 +1,0 @@
-package org.antislashn.communes.dao;
-
-public interface CommuneDAO {
-
-}

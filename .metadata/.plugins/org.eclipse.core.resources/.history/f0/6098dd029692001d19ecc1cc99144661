@@ -1,9 +1,0 @@
-package org.antislashn.communes.dao;
-
-import org.antislashn.communes.entities.Commune;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface CommuneDAO {
-	Commune findById(int id);
-}
