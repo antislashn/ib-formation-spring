@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/franck/Workspaces/spring-ib"/>
 			<item value="/home/franck/Workspaces/spring-ib/RemoteSystemsTempFiles"/>
 			<item value="/home/franck/Workspaces/spring-ib/spring-jpa-base"/>
 		</list>
@@ -50,6 +51,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="demo-spring"/>
 			<item value="spring-musicien"/>
 		</list>
 		<list key="projectNameTemplate">

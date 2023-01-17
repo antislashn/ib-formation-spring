@@ -4,12 +4,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
-@ComponentScan(basePackages = {"demo"})
+//@ComponentScan(basePackages = {"demo"})
 @PropertySource("classpath:application.properties")
-@Configuration
+@EnableAspectJAutoProxy
 public class MainSpringMusicien {
 
 	public static void main(String[] args) {
