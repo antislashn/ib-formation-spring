@@ -1,0 +1,11 @@
+spring.datasource.driver-class-name=org.apache.derby.jdbc.ClientDriver40
+spring.datasource.url=jdbc:derby://localhost:1527/contacts
+
+# deux lignes suivantes pour derby
+spring.jpa.generate-ddl=false
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+
+
+# true par défaut
+#spring.jpa.open-in-view=false

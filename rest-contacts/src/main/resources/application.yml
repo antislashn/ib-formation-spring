@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.apache.derby.jdbc.ClientDriver40
+    url: jdbc:derby://localhost:1527/contacts
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
